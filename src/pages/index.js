@@ -1,13 +1,11 @@
 import React from 'react';
 import { Link } from 'gatsby';
 
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import Layout from '../components/layout/layout';
 
 const IndexPage = () => {
   return (
-    <div>
-      <Header></Header>
+    <Layout>
       <h1>Hello</h1>
       <h2>I'm Paul,</h2>
       <p>
@@ -16,8 +14,7 @@ const IndexPage = () => {
       <p>
         About me <Link to="/about">About me</Link>
       </p>
-      <Footer></Footer>
-    </div>
+    </Layout>
   );
 };
 

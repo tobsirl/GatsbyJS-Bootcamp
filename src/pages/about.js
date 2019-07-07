@@ -1,17 +1,14 @@
 import React from 'react';
 import { Link } from 'gatsby';
 
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import Layout from '../components/layout/layout';
 
 const About = () => {
   return (
-    <div>
-      <Header></Header>
+    <Layout>
       <h1>About Page</h1>
       <Link to="/contact">Contact page</Link>
-      <Footer></Footer>
-    </div>
+    </Layout>
   );
 };
 

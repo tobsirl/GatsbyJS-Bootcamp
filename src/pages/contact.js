@@ -1,18 +1,15 @@
 import React from 'react';
 
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import Layout from '../components/layout/layout';
 
 const Contact = () => {
   return (
-    <div>
-      <Header></Header>
+    <Layout>
       <h1>Contact Page</h1>
       <a href="https://google.com" target="_blank">
         Google
       </a>
-      <Footer></Footer>
-    </div>
+    </Layout>
   );
 };
 
