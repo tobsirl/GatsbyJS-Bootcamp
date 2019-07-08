@@ -4,12 +4,15 @@ import Header from '../Header';
 import Footer from '../Footer';
 
 import '../../styles/index.scss';
+import layoutStyles from './layout.module.scss';
 
 const Layout = props => {
   return (
-    <div>
-      <Header></Header>
-      {props.children}
+    <div className={layoutStyles.container}>
+      <div>
+        <Header></Header>
+        {props.children}
+      </div>
       <Footer></Footer>
     </div>
   );
