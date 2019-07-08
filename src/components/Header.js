@@ -5,23 +5,33 @@ import headerStyles from './Header.module.scss';
 
 const Header = () => {
   return (
-    <header>
+    <header className={headerStyles.header}>
       <nav>
-        <h1>Gatsby Bootcamp</h1>
-        <ul>
+        <h1>
+          <Link className={headerStyles.title} to="/">
+            Gatsby Bootcamp
+          </Link>
+        </h1>
+        <ul className={headerStyles.navList}>
           <li>
-            <Link className={headerStyles.link} to="/">
+            <Link className={headerStyles.navItem} to="/">
               Home
             </Link>{' '}
           </li>
           <li>
-            <Link to="/blog">Blog</Link>{' '}
+            <Link className={headerStyles.navItem} to="/blog">
+              Blog
+            </Link>{' '}
           </li>
           <li>
-            <Link to="/contact">Contact</Link>{' '}
+            <Link className={headerStyles.navItem} to="/contact">
+              Contact
+            </Link>{' '}
           </li>
           <li>
-            <Link to="/about">About</Link>{' '}
+            <Link className={headerStyles.navItem} to="/about">
+              About
+            </Link>{' '}
           </li>
         </ul>
       </nav>
