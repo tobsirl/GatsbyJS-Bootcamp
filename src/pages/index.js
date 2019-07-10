@@ -3,6 +3,8 @@ import { Link } from 'gatsby';
 
 import Layout from '../components/layout/layout';
 
+
+
 const IndexPage = () => {
   return (
     <Layout>
