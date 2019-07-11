@@ -6,9 +6,18 @@
 
 module.exports = {
   /* Your site config here */
-  siteMetadata:{
+  siteMetadata: {
     title: 'Full-Stack Bootcamp',
-    author: 'Paul Tobin'
+    author: 'Paul Tobin',
   },
-  plugins: [`gatsby-plugin-sass`],
+  plugins: [
+    `gatsby-plugin-sass`,
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'src',
+        path: `${__dirname}/src/`,
+      },
+    },
+  ],
 };
