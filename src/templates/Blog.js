@@ -9,9 +9,9 @@ export const query = graphql`
     contentfulBlogPost(slug: { eq: $slug }) {
       title
       publishedData(formatString: "Do MMMM, YYYY")
-    }
-    contentfulBlogPostBodyRichTextNode {
-      body
+      body {
+        json
+      }
     }
   }
 `;
@@ -21,6 +21,7 @@ const Blog = props => {
     <Layout>
       <h1>{props.data.contentfulBlogPost.title}</h1>
       <p>{props.data.contentfulBlogPost.publishedData}</p>
+      {documentToReactComponents(props.data.contentfulBlogPost.body.json)}
     </Layout>
   );
 };
