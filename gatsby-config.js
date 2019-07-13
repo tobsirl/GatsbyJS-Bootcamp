@@ -11,6 +11,13 @@ module.exports = {
     author: 'Paul Tobin'
   },
   plugins: [
+    {
+      resovle: 'gatsby-source-contentful',
+      options: {
+        spaceId: '',
+        accessToken: ''
+      }
+    }
     `gatsby-plugin-sass`,
     {
       resolve: 'gatsby-source-filesystem',
